@@ -4,7 +4,10 @@
         <title>Yasin YAŞAR</title>
         <meta charset=”utf-8″>
         <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1200px-How_to_use_icon.svg.png">
-
+        <!--Bu, herhangi bir q etiketinin içindeki metin rengini kırmızı yapan CSS kodudur. -->
+        <style>
+            q { color: red }  
+        </style>
     </head>
     <body>
         <center>
@@ -30,7 +33,7 @@
         <p>Resim</p>
         <br>
         <center>
-        <img src="https://www.medibim.com.tr/TR/wp-content/uploads/2020/09/biyomedikal_meslegi-800x445.jpg" width="256" height="256" alt="Varsayılan Resim...">
+        <img src="https://www.medibim.com.tr/TR/wp-content/uploads/2020/09/biyomedikal_meslegi-800x445.jpg" width="512" height="512" alt="Varsayılan Resim...">
         </center>
         <br><br>
         <!-- Burada bir liste gösterdim-->
@@ -142,5 +145,116 @@
          onu <sub> </sub> içinde eklemelisin
         -->
         <p>10<sup>6</sup> log<sub>2</sub> 64 = 6 Mbps</p>
+        <!--
+            Bir paragrafın yönünü belirtmek için <p> etiketindeki align özelliğini kullanabilirsin.
+        -->
+        <p align="left">Sola hizalandı paragraf</p>
+        <p align="right">Sağa hizalandı paragraf</p>
+        <p align="center">Ortaya hizalandı paragraf</p>
+        <!--
+            Font etiketi her zaman bir dizi özellikle çalışır, kendi başına herhangi bir etkisi 
+            yoktur ve en önemli özellikleri yazı tipini belirlemek, rengini değiştirmek ve boyutunu 
+            belirleyen özelliklerdir.
+            
+            Font etiketinin ilk özelliği, kullanılan yazı tipini belirleyen face özelliğidir ve 2 
+            temel yazı tipi vardır.
+        -->
+        <font face="verdana">Verdana yazı</font><br>
+        <font face="Courier New">Courier New yazı</font>
+        <!--
+            Ardından, yazı tipinin rengini belirtmek için kullanılan color özelliği var.
+        -->
+        <p>This is <font color="red">Red</font> and this is <font color="blue">Blue</font> and this is <font color="yellow">yellow</font></p>
+        <br>
+        <p>This is <font color="#A3B6FF">sky</font><br>
+            This is <font color="#ff0000">red</font></p>
+            <!--
+                Ve burada tüm paragrafın rengini belirtledim.
+            -->
+        <p style="color:blue;">marketten süt aldım</p>
+        <!--
+            Size özelliği yazı tipi boyutunu belirtir. Yedi yazı tipi boyutu vardır.
+
+            Sayfadaki ana yazı tipi bu boyutlardan birini alır ve belirli bir kelimede veya metnin 
+            bir bölümünde yazı tipi boyutunu değiştirmek istiyorsan, yazı tipi boyutunu belirli bir 
+            miktarda artırmak veya azaltmak için size özelliği olan yazı tipi etiketini kullan.
+        -->
+        <p>çok <font size="+4">büyük</font> bir gömlek aldım.</p>
+        <!--
+            Temel yazı tipi 3 ise, yazı tipini en büyük yazı tipi olan 7'ye ulaşana kadar 4 kat artırabilirsin 
+            ve en küçük yazı boyutu olan 1 olacak şekilde iki kez azaltabilirsin, değiştirmediğin sürece 
+            standart taban yazı tipi 3'tür.
+
+            Sayının etkisi, artırılacak sayının önüne + ve azalacak sayının önüne - eklenerek ve 7 boyutun 
+            üzerine çıkarken, tarayıcı metni 7 boyutunda ve aynı zamanda 1'den küçükse 1 kabul edilir. 
+            Örneğin yazı tipi boyutunu 7'den büyük koyarsan tarayıcı 7, boyutunu 1'den küçük koyarsan tarayıcı 
+            1 olarak kabul eder.
+        -->
+        <font size="+4">Size 7</font> <br> 
+        <font size="+3">Size 6</font> <br>
+        <font size="+2">Size 5</font> <br>
+        <font size="+1">Size 4</font> <br> 
+        <font size="0">Size 3</font> <br>
+        <font size="-1">Size 2</font> <br> 
+        <font size="-2">Size 1</font> <br>
+
+        <!--
+            <big> ve <small> etiketlerini kullanarak bir yazı tipini bir adım büyütüp küçültmenin hızlı bir 
+            yolu da vardır.
+
+            <big> kodunu ekledikten sonra yazı tipi boyutu bir derece büyüyecek ve tekrar <big> eklersen 
+            iki derece büyüyecektir.
+        -->
+        <hr>
+        <big>Size 4</big><br>
+        <big><big>Size 5</big></big><br>
+        <big><big><big>Size 6</big></big></big><br>
+        <hr>
+        <small>Size 2</small><br>
+        <small><small>Size 1</small></small><br>
+        <hr>
+        <!--
+            Sayfadaki alıntı başka bir siteden alındı ise, alıntıyı kopyaladığın sitenin bağlantısını <blockquote> 
+                etiketinin sahip olduğu cite özelliğinin içinden belirtin, çünkü bu alıntı yapılan siteyi arama motorları 
+                için daha önemli hale getirecek ve böylece alıntıyı kopyaladığın site için faydalı olursun.
+        -->
+        <blockquote cite="https://tr.wikipedia.org/wiki/Türkiye">
+            Türkiye, iki kıtada toprağı bulunan bir Avrasya ülkesidir.
+            Topraklarının %97'si Asya üzerinde bulunur ve bu kısım Anadolu diye adlandırılır.
+            Kalan %3'lük kısım ise Avrupa kıtasında kalır ve Doğu Trakya diye adlandırılır.
+        </blockquote>
+        <!--
+            Alıntılanan metni " " arasında görüntülemek istiyorsan <q> </q> içine ekleyebilirsin.
+        -->
+        <p>Bilgi <q><b>bir programlama dili değildir</b></q></p>
+        <br>
+        <!--
+            İlk başta, kısaltılmış bir ad (Abbreviation) ile kastettiğim şey, HTML gibi tek bir kelimeyi 
+            görüntüleyebileceğin ve fareni üzerine getirdiğinde tarayıcının tam adı Hyper Text Markup Language 
+            gösterecektir, bu kelimenin kısaltmasıdır.
+
+            Şimdi, kısa bir isim eklemek istiyorsan, onu <abbr> </abbr> içine eklemelisin.
+        -->
+        <p><abbr title="Hyper Text Markup Language">HTML</abbr> web Sayfaları oluşturmak için kullanılır.</p><br>
+        <!--
+            Erişim veya iletişim bilgilerini görüntülemek istiyorsan, metni <address> </address> içine eklemelisin.
+            Ardından tarayıcı onu yeni bir satırda ve italik olarak görüntüler.
+        -->
+        <address>Kocaeli, Kartepe, Türkiye</address>
+        <address>mail: yasinyasar005@gmail.com<br>tel: 05311231231</address><br>
+        <!--
+            Görüntülenen önemli şeyin başlığını vurgulamak istersen, onu <cite> </cite> içine ekleyebilirsin.
+
+            <cite> </cite> içine metin yerleştirirken Tarayıcı genellikle italik olarak görüntüler.
+        -->
+        <p><cite>Dark</cite> en güzel dizidie</p>
+        <!--
+            Kullanıcıya klavyedeki belirli düğmeleri tıklamasını söyleyen açıklamalar geliştirirken, 
+            bunları <kbd> </kbd> arasına eklemelisin.
+
+            Bu etiket, metnin geri kalanından farklı görünmesi için yalnızca içindeki metnin yazı 
+            tipini monospace olarak değiştirir.
+        -->
+        <p>bir sayfayı bilgisayarını kaydetmek için <kbd>Ctrl + S</kbd > tık.</p>
     </body>
 </html>
