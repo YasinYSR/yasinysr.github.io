@@ -597,5 +597,191 @@
             </li>
         </ol>
         <hr>
+        <!--
+            Genel olarak, tarayıcıya sayfada sırasız bir liste görüntülemek istediğimizi bildirmek için <ul> </ul> 
+            etiketini kullanıyoruz.
+            Eklemek istediğimiz herhangi bir öğe <li> </li> etiketinin içine yerleştirilmelidir.
+
+            Bilgi: ul, sırasız liste anlamına gelen Unordered List'in kısaltmasıdır ve li, listedeki bir öğe 
+            anlamına gelen List Item'in kısaltmasıdır.
+        -->
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>java scirpt</li>
+        </ul>
+        <!--
+            Öğelerden önce görünecek karakterlerin türünü belirtmek için <ul> etiketine type özelliği ekleyebilir ve 
+            buna değer olarak aşağıdaki değerlerden birini ekleyebilirsin:
+
+            square: Her öğenin başında bir kutu göstermek için.
+            circle: Her öğenin başında bir daire göstermek için.
+            disc:   Her öğenin başında bir disk (yani büyük bir nokta) gösterir ve bu, değeri kendini belirtmemeni durumunda 
+                    ayarlanan varsayılan değerdir.
+            none:   Her öğenin başında bir simge göstermemek için ekleyebilirsin
+        -->
+        <ul type="circle">
+            <li>html</li>
+            <li>css</li>
+            <li>java script</li>
+        </ul>
+        <!--
+            Listedeki belirli bir öğeden önce görünecek sembolün türünü değiştirmek istiyorsan, öğeye type özelliğini ekleyebilir 
+            (yani <li> etiketi için) ve başlamak istediğin türü iletebilirsin.
+        -->
+        <ul>
+            <li>html</li>
+            <li type="circle">css</li>
+            <li>java script</li>
+        </ul>
+        <!--
+            Öğeyi özel bir liste eklemek için öğenin altında bir liste ekleyebilirsin.
+            Hiç bir görünmek istediğin öğenin liste, listeyi öğenin altında eklemelisin.
+
+            Bilgi:  Bir listeye bir listede yerleştirirken, tarayıcı otomatik olarak farklı simgeleri dahili liste öğelerinin 
+                    önüne yerleştirecektir.
+                    Dilersen ana listeyi ve iç listeyi öğelerinden önce görünecek sembollerin türünü belirtmek için type özelliğini 
+                    kullanabileceğini unutma.
+        -->
+        <ul>
+            <!-- İçine koyduğumuz ilk öğe üç öğeden oluşan bir liste-->
+            <li>Front-End
+                <ul>
+                    <li>HTML</li>
+                    <li>HTML</li>
+                    <li>Javascript</li>
+                </ul>
+            </li>
+            <!-- İçine koyduğumuz ikinci öğe, iki öğeden oluşan bir liste -->
+            <li>Back-End
+                <ul>
+                    <li>MySQL</li>
+                    <li>php</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <!--
+            Açıklama listesinin bir dizi terimi görüntülemesi amaçlanmıştır ve her terimin bir açıklaması vardır.
+
+            Bu liste türünde, verdiğin herhangi bir terim veya açıklama listedeki öğeler olarak kabul edilir.
+            Genel olarak, terim doğrudan satırın başında görüntülenirken, açıklama satırın başlangıcından biraz önce, 
+            kendisinden önceki terimin takipçisi gibi görünecek şekilde kaydırılır.
+        -->
+        <!--
+            Sayfada bir açıklama listesi görüntülemek için aşağıdaki etiketleri kullanılıyor:
+
+            <dl> </dl>: Tarayıcıya verileri bir açıklama listesi içinde görüntülemek istediğini söylemek için koymanı gereken ana etikettir.
+            <dt> </dt>: Altında listeleneceği açıklamaya bir terim veya başlık eklemek için kullanırsın.
+            <dd> </dd>: Terimin bir açıklamasını veya altına düşen bir seçeneği eklemek için kullanırsın.
+        -->
+        <dl>
+            <dt>best anime</dt>
+            <dd>- seishun buta yarou wa bunny girl senpai no yume wo minai</dd>
+            <dd>- akame ga kill</dd>
+            <dd>- tokyo ghoul</dd>
+            <dt>best anime movie</dt>
+            <dd>- koe no katachi</dd>
+            <dd>- corpse party</dd>
+            <dd>- kimi no suizo wo tabetai</dd>
+        </dl>
+        <hr>
+        <!--
+            "Path" kelimesi, belirli bir dosyanın bulunduğu konum anlamına gelir.
+
+            Sayfaya resim, video, şarkı, program, zip dosyası veya başka bir dosya için bağlantı eklerken, içindeki yol doğru 
+            ve hatasız olarak belirtilmelidir çünkü bir harfte hata varsa çalışmayacak.
+
+            Genel olarak, dosya yollarının genel konsepti, konumuna bağlı olarak dosyanın yolunu belirtmektir.
+            Mesela, ens adında bir dosyam var ve onu bir koda eklemek için dosya yoluyu çıkartması gerekir. Bu dosya D diskinde 
+            ve k-kudo adlı bir klasörde bulunduğunu diyelim, tarayıcıya ens dosyasını bulması için D diskine ve ardından k-kudo 
+            klasörüne girdikten sonra dosyayı bulacaktır.
+
+            Genel olarak, dosyanın konumunu belirlerken kullanabileceğin iki yöntem vardır ve bunlar:
+
+            -Relative Path veya göreli yol, dosya yolunun, dosyanın ekleneceği sayfanın konumuna göre yerleştirildiği anlamına gelir.
+            -Absolute Path veya Tam yol, dosya yolunun bilgisayar için olduğu gibi ayarlandığı anlamına gelir.
+        -->
+        <!--
+            bilgi:  Bu derste öğreneceğin şey her tür dosya için geçerlidir, bu nedenle yolun nasıl belirleneceğini bilmek gelecekte, 
+                    özellikle .css dosyaları ve .js dosyaları eklemeye çok yardımcı olur ve, bu dersteki ilgiler biraz zor olabilir 
+                    ama bu ders HTML dilinde çok önemli derslerden biri olduğu için senden dersi anlamaya çalışmanı istiyorum.
+        -->
+        <!--
+            Aşağıdaki örneklerde sayfaya bir resim eklemek istediğimizi varsayacağım, ve her seferinde göreli yol stilinde nasıl her 
+            zaman bulabileceğini öğrenmek için her resmin yolu sayfa göre farklı bir yol aldığı varsayacağım.
+
+            Bir resmi görüntülemek için <img src=" "> etiketini ve src özelliğinin değeri olarak resim yolunu kullanıyoruz.
+            
+            Bir sonraki derste, resimlere veya fotoğrafları eklenebilecek tüm özellikleri öğreneceksin, ancak şimdilik yalnızca 
+            yolları belirleme yöntemine odaklanmanı istiyorum.
+        -->
+        <hr>
+        <!--
+            Genel olarak, tarayıcıya sayfada bir video görüntülemek istediğimizi söylemek için <video> etiketini kullanılıyor.
+            Görüntülemek istediğimiz videoyu belirtmek için <source> etiketini kullanıyoruz.
+
+            Sayfaya video eklemek için HTML5, sayfaya video eklemenin iki yolunu sağlayabilir ve iki yöntem de esas olarak <video> 
+                etiketini kullanıyor.
+            Tek bir video, yani yalnızca bir video dosyası eklemek için <video> etiketini <video src="..."> olarak kullanabilirsin.
+            Üç noktayı video dosyasının yolu veya bağlantısıyla değiştirebilirsin.
+        -->
+        <!--
+            Ekliyebildiğin video türleri .mp4, .webm ve .ogg tüm tarayıcılarda çalışır ve bununla, tarayıcıların herhangi bir 
+            eklentiye ihtiyaç olmadan bu tür video dosyalar çalışacaktır.
+
+            Kullanıcının cihazının zayıf olması ve sayfadaki videonun çözünürlüğünün çok yüksek olması tarayıcının video 
+            dosyasını çalıştırmayabilir olduğunu unutma.
+
+            Biraz önce bahsettiğim formüller tüm tarayıcılarda çalışıyor ancak bu video kullanıcının cihazında çalışacak anlamına gelmiyor.
+            Çok önemli bir şeye dikkat etmelisin, o da kullanıcının telefonunun veya bilgisayarının video dosya formatını 
+            desteklemeyebileceğidir.
+
+            Genel olarak .mp4 ve .webm kullanmanı öneririm.
+
+            Bu nedenle, oynatılabilecek video türlerinin yanı sıra, kullanıcı tarafından hangi videoların oynatılabileceğini 
+            belirlerken videoların çözünürlük bakılması gereken bir şeydir.
+
+            Genel olarak, 360p tüm kullanıcılarda çalışıyor ve, 720p çoğu kullanıcılarda çalışıyor.
+        -->
+        <!--
+            <video> etiketi için etiketin en önemli özellikleri şunlardır:
+
+            width: Video penceresini Piksel olarak genişliğini belirtmek için kullanılıyor.
+            height: Video penceresini Piksel olarak uzunluğunun belirtmek için kullanılıyor.
+            control: Video penceresindeki kontrol düğmelerini göstermek için kullanılıyor.
+            <source> etiketi için, etiketin en önemli özellikleri şunlardır:
+
+            src: görüntülenecek videonun yolunu belirtmek için.
+            type: Görüntülenecek videonun türünü belirtir.
+        -->
+        <!--
+            Görüntülenecek videonun boyutunu belirtmezsen, tarayıcı videoyu yüklendikten sonra sayfada görüntülemeye çalıştığında 
+            büyük olasılıkla yanıp söner ve bir anda tüm sayfayı yeniden çizer, bu nedenle kullanıcı bunu bir flaş olarak görebilir.
+
+            Bu nedenle, ister HTML özellikleriyle ister CSS koduyla belirtsen de, sayfada görüntülemeyi düşündüğün videonun boyutunu 
+            her zaman belirtmeyi unutma.
+        -->
+        <!--
+            <video> etiketi herhangi bir oynatma denetimi göstermez, HTML, CSS ve JavaScript ile kendini oluşturabilirsin; Demek istediğim 
+            şey video çıkıyor ama çalışmıyor ve duraklatma, ses kilidi veya diğer ayarlar gibi herhangi bir kontrol düğmesi göstermiyor ve bu 
+            tercihler css ve javascript kullanılarak oluşturulabiliyor ve HTML5'de controls özelliği var.
+        -->
+        <!--
+            Aşağıdaki örnekte, çalışmaması durumunda videonun bir yedek kopyasını ekledim.
+
+            <source> etiketi 2 kere ekledim sebebi daha önceden hazırladım 2 farklı kopya'dır. Niye böyle yaptım?
+            Çünkü tarayıcı ilk kopya açmayı denicek çalıştı ise video normal bir şekilde görüncek , ama birinci kopya çalışmadı ise ikinci kopya oynatmayı denicek.
+
+            Burada .mp4 bir kopya ekledim ve .webm bir kopya ekledim.
+            Birinci kopya çalımadı ise tarayıcı sonraki kopya oynatmayı denicek.
+            Tabi kii kopya eklemekte zorunlulu değilsin ve bir tek kopya ekleye bilirsin kopya eklemekte önenirim ve istediğin kadar kopya eklebilirsin
+
+            Tarayıcın video etiketini desteklemiyor! Metini kullanıcının tarayıcısı ilk etapta video oynatmayı desteklemiyorsa sayfada görüntülenir.
+            Tarayıcı yalnızca formatı desteklemiyorsa mesajın görüneceğini, ancak bu durumda gerekli videoyu bulamazsa, metni göstermeyeceğini ve yalnızca bir resmi de görüntüleyeceğini unutma.
+        -->
+        <video width="512" height="256" controls>
+            <source src="../LP - When We're High (Official Music Video).mp4" type="LP - When We're High (Official Music Video)/mp4">
+        </video>
     </body>
 </html>
