@@ -256,5 +256,346 @@
             tipini monospace olarak değiştirir.
         -->
         <p>bir sayfayı bilgisayarını kaydetmek için <kbd>Ctrl + S</kbd > tık.</p>
+        <!--
+            Program Çıktısını görüntülemek istiyorsan, onu <samp> </samp> arasına koyabilirsin.
+            Bu etiket, metnin geri kalanından farklı görünmesi için yalnızca içindeki metnin yazı 
+            tipini monospace olarak değiştirir.
+        -->
+        <p>Bilgisayarım bana şu uyarıyı gösteriyor:</p>
+        <p><samp>Hata kodu: 0x80070043<br>Ağ adı bulunamadı.</samp></p>
+        <!--
+            Bir kod veya aritmetik işlem olan metni, onunla birlikte aynı paragrafta yer alan 
+            metinden farklı olarak görüntülemek istiyorsan, kodu <code> </code> arasına koyabilirsin.
+
+            Bu etiket, metnin geri kalanından farklı görünmesi için yalnızca içine yerleştirilen metnin 
+            yazı tipini monospace türüne değiştirir.
+        -->
+        <br>
+        <p>HTML'de resim eklemek için <code><img src="photo"></code> kodunu ekle.</p>
+        <p>Pisagor teoremi: <code>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></code></p>
+        <br>
+        <!--
+            Programlama, matematik ve diğer herhangi bir konuyla ilgili konular, genellikle X ve Y gibi 
+            değişken adlarını kullandığımız denklemleri içerir. Değişken adını, aynı paragrafta onunla 
+            birlikte yerleştirilen metinden farklı bir şekilde görüntülemek istiyorsan, onu <var> </var> 
+            arasına koyabilirsin.
+            
+            Bu etiket, içine koyduğumuz adı italik olarak gösterir.
+        -->
+        <p><code>x + 5 = 13</code> olduğu yerde <var>x</var> değerini hesaplayın</p>
+        <hr>
+        <!--
+            Bağlantı (Link) genellikle başka bir sayfanın adresine işaret eden bir metindir, üzerine tıkladığında 
+            tarayıcı seni ona görünecektir. Ayrıca, bağlantı bir dosyaya veya programa işaret edebilir ve üzerine 
+            tıkladığında tarayıcı seni indirmek isteyip istemediğini sorar.
+            
+            Bağlantı türleri
+            -Bağlantıyı metin olarak ekleyebilirsin, tıkladığında verilen bağlantıya veya bir dosya indirmeye 
+            yönlendirileceksin.
+            -Bağlantıyı buton olarak ekleyebilirsin, tıkladığında verilen bağlantıya veya bir dosya indirmeye 
+            yönlendirileceksin.
+            -Bağlantıyı resim olarak ekleyebilirsin, tıkladığında verilen bağlantıya veya bir dosya indirmeye 
+            yönlendirileceksin.
+        -->
+        <!--
+            Genelde, sayfada bir bağlantı görüntülemek için <a> etiketini <a href="https://www.k-html.com">HTML 
+            öğren </a> olarak kullanılıyor.
+
+            -HTML öğren metnini sayfada görünmesini istediğimiz ve tıklanabilir olan metni yerleştiriyoruz.
+            -HTML öğren kelimenin yerine görünmek istediğin metini ekleyebilirsin.
+            -Sayfada görünmek istediğin bağlantı'yı https://www.k-html.com Bağlantı yerine ekleyebilirsin.
+        -->
+        <p><a href="https://www.google.com.tr/?hl=tr">GOOGLE</a></p>
+        <!--
+            Bağlantının üzerine geldiğinde bir ipucu göstermek istiyorsan, title özelliğini <a> etiketine 
+            ekleyebilir ve değeri olarak görüntülemek istediğin ipucunu iletebilirsin.
+        -->
+        <p><a href="https://www.google.com.tr/?hl=tr" title="Google'a git...">Google'a git</a></p>
+        <!--
+            Sayfaya link eklemek ve üzerine tıkladıktan sonra kullanıcıyı mail için varsayılan uygulamaya 
+            yönlendilirmesi ve gelen maili otomatik olarak seçmesi istiyor musun?
+
+            Kendine "Bunu nasıl yapacağım" diye mi soruyorsun? Peki, ilkte mailto: kelimesini ve ardından 
+            kullanıcının href niteliğinin değeri olarak almasını istediğin e-postayı ekle.
+
+            mesela mailto:yardim@k-html.com eklerken kullanıcı üzerine tıkladığında direkt olarak yardim@k-html.com 
+            e-postasında mesaj göndermeye gidecektir.
+        -->
+        <p><a href="mailto:yasinyasar005@gmail.com" title="e posta gönder">e posta gönder</a></p>
+        <!--
+            Kullanıcıyı aynı sayfadaki belirli bir öğeye veya başka bir sayfadaki belirli bir öğeye yönlendiren 
+            bir bağlantı eklemek istiyorsan, öğeye id verebilir ve ardından kullanıcıyı o öğeye yönlendirmek 
+            istediğin bağlantıyı verebilirsin.
+        -->
+        <!--
+            burası tamamlanacak
+        -->
+        <hr>
+        <!--
+            Sayfayı tasarlarken, tasarımcının sayfaya yerleştirilen her bağlantı için href özelliğinin değerini 
+            belirtmesine gerek yoktur.
+
+            Normalde bağlantı metninin tıklanabilir normal bir bağlantı gibi görünmesi için href özelliğin 
+            değeri olarak # sembolünü koyabilirsin ve ardından bu tarayıcıya kullanıcıyı hiçbir şeye yönlendirmemesini
+            söylemek gibidir.
+        -->
+        <a href="#">boş link</a><br>
+        <a>sadece 'a' operatörü</a><br>
+        <!--
+            Açılan sayfanın en üstüne kullanıcıyı yönlendiren bir link eklemek istersen _top değerini ekleyebilirsin.
+        -->
+        <a href="#top">En başa git</a><br>
+        <!--
+            Varsayılan olarak, sayfadaki bir bağlantıya tıkladığında, önceki örnekte fark ettiğimiz gibi, 
+            yeni sayfanın mevcut sayfanın yerine açıldığını görürüz.
+
+            Bağlantının nerede açılacağını belirtmek istiyorsan, target özelliğini <a> etiketine eklemeli 
+            ve ona aşağıdaki değerlerden birini vermelisin:
+
+            _self: bağlantı içeriğinin şu anda açık olan aynı sayfada açılmasını istemeni durumunda kullanabilirsin.(bu varsayılandır)
+            _blank: Tarayıcıda yeni bir sekme açılmasını ve bağlantı içeriğinin bu sekmede görünmesini istemeni durumunda.
+            _top: Bağlantı içeriğinin aynı sayfada açılmasını istiyorsan, mevcut sayfaya yerleştirilmiş örtüşen sayfaları kaldırarak.
+            _parent: Bağlantı içeriğinin mevcut sayfanın bulunduğu sayfanın yerine açılmasını istiyorsan.
+        -->
+        <p><a href="index.html" target="_self">Geçerli pencerede</a></p>
+        <p><a href="index.html" target="_blank">Yeni sekmede</a></p>
+        <p><a href="index.html" target="_top">Tam pencerede</a></p>
+        <p><a href="index.html" target="_parent">Yeni pencerede</a></p>
+        <hr>
+        <!--
+            Linki text olarak koymak yerine buton olarak koymak istersen <button> etiketini kullanarak 
+            koyabilirsin, kod dene butonlarında buton etiketi ile tasarlanmış mavi butonlara bakabilirsin.
+
+            <button onlclick="document.location='link'">metin</button>
+            Metin kelimesinin yerine butonda görünmesini istediğin yazıyı ekle.
+            link kelimesinin yerine butona tıklandığında kullanıcıyı yönlendirmek istediğin linki ekle.
+        -->
+        <button onclick="document.location='https://www.google.com.tr/?hl=tr'">Google</button>
+        <hr>
+        <!--
+            Linki metin yerine resim olarak koymak istersen <a> etiketini kullanarak normal link olarak 
+            koyabilirsin ve içine tıkladığında linkini açmak istediğin resmi yerleştirebilirsin.
+
+            Özel bir derste resimlerle nasıl çalışacağını öğreneceksin, ancak şimdi bir resim koymak için 
+            <img> etiketini <img src="foto_linki"/> olarak kullandığımızı bilmeni gerekiyor.
+            foto_linki kelimesinin yerine görüntülenecek resmin bağlantısını ekliceksin.
+
+            Şimdi nasıl resim ekliceğini boş vermelisin ve nasıl fotoğrafa tıklarsan bir link açacağını 
+            odaklanmanı istiyorum.
+        -->
+        <a href="index.html" target="_blank"><img src="https://www.medibim.com.tr/TR/wp-content/uploads/2020/09/biyomedikal_meslegi-800x445.jpg" width="32" height="32" alt="Biyomedikal"></a><br>
+        <!--
+            Tarayıcı ile herhangi bir bağlantıya erişmeye çalıştığında, bağlantının atıfta bulunduğu belgenin 
+            formatına göre uygun şekilde davranacaktır.
+            Burada bahsettiklerim çok dikkat et çünkü ileride ihtiyaç duyacaksın ve tarayıcının dosyalarla nasıl 
+            ilgilendiğini anlamak için örneklerdeki bağlantılara erişmeyi denemeni tavsiye ederim.
+
+            1- Web sayfası bağlantıları
+            Tarayıcı, bağlantının bir .html ile biten dosyasına bağlantı olduğunu veya <!doctype html> etiketi içerdiği tespit ederse , içerdiği kodun sonucunu kullanıcıya gösterecek, yani kullanıcıya normal bir web sayfası olarak görüntülenecektir.
+
+            2- Resim bağlantıları
+            Tarayıcı, bağlantının bir görüntüye bağlantı olduğunu tespit ederse, bunu sayfada olduğu gibi kullanıcıya gösterir.
+
+            3- Metin dosyası bağlantıları
+            Tarayıcı, bağlantının bir .txt, .css, .js veya başka bir tür metin dosyasına bağlantı olduğunu tespit ederse, kullanıcıya içindeki metni olduğu gibi gösterir.
+
+            4- Bilinmeyen dosya bağlantıları
+            Tarayıcı, bağlantının tanıyamadığı bir program veya dosyaya ait olduğunu tespit ederse, onu sayfada görüntüleyemez ve bu nedenle indirmek isteyip istemediğini soracaktır.
+        -->
+        <hr>
+        <!--
+            Sayfada bir tablo görüntülemek için, aşağıdaki etiketleri kullanarak istediğin şekilde oluşturabilirsin:
+
+            -<table> </table>, tarayıcıya bir tablo görüntülemek istediğin söylemek için ayarlamanı gereken ana 
+             etikettir.
+            -<tr> </tr> Tabloya bir satır eklemek için kullanılır.
+            -<th> </th> içine koyduğun herhangi bir metnin başlığı gibi, kalın ve ortada görünen bir satıra bir alan 
+             eklemek için kullanırsın. örneklerde daha çok anlatacağım.
+            -<td> </td> Normal bilgileri temsil eden bir satır kutusu eklemek için kullanırsın, içine koyduğun metin 
+             normal bir metin olarak görünür.
+        -->
+        <!--
+            Genel olarak Bahsettiğim etiketler, tabloyu oluşturmak için ihtiyacın olan etiketlerdir, ancak bunları 
+            tek başına kullanmanın tablonun tarayıcıda iyi görünmesini sağlamayacağını bilmeni gerekir, ancak bunu 
+            tabloya bazı HTML özellikleri ekleyerek veya tablo ile kullanılabilecek CSS kodunu kullanma.
+
+            Tabii ki CSS seni tablo tasarımı için harika olanaklar sunuyor, ancak HTML bize sadece ne sağladığına 
+            odaklandığımız ve çalıştığımız için, sadece HTML bize sağladığı özelliklere bakacağız.
+        -->
+        <center>
+        <table border="1" title="sample">
+            <!--tablonun ilk satırını tanımladık ve 3 adet sütün ekledik-->
+            <tr>
+                <th>id</th>
+                <th>ad</th>
+                <th>soyad</th>
+            </tr>
+            <tr>
+                <th>0626</th>
+                <th>Yasin</th>
+                <th>YAŞAR</th>
+            </tr>
+            <tr>
+                <th>0626</th>
+                <th>Yasin</th>
+                <th>YAŞAR</th>
+            </tr>
+            <tr>
+                <th>0628</th>
+                <th>Yasin</th>
+                <th>YAŞAR</th>
+            </tr>
+        </table>
+        </center><br>
+        <!--
+            Daha iyi görünmesi için sütuna ekleyebileceğin üç özellik vardır ve bu özellikler:
+
+            border : Tablo yazı tiplerini göstermek için kullanabilirsin, onlara verdiğin sayı satırlar ve 
+            sütunlar arasına yerleştirilecek yazı tiplerinin boyutunu temsil eder.
+            
+            width : Bunu tarayıcıya yaptırmak yerine tablonun genişliğini kendini belirlemek için kullanabilirsin, 
+            ona verdiğin sayı tablonun genişliğini temsil eder.
+            
+            height : Bunu tarayıcıya yaptırmak yerine tablonun uzunluğunu kendini belirlemek için kullanabilirsin, 
+            ona verdiğin sayı tablonun uzunluğunu temsil eder.
+        -->
+        <center>
+        <table border="1" width="50%" height="100">
+            <tr><th>00</th><th>01</th><th>02</th></tr>
+            <tr><th>10</th><th>11</th><th>12</th></tr>
+            <tr><th>20</th><th>21</th><th>22</th></tr>
+        </table>
+        </center>
+        <!--
+            Tablo alanlarını birleştirmek istiyorsan, bunun için kullanabileceğin iki özellik vardır:
+
+            colspan: Aynı satırdaki hücreleri birleştirmek için kullanılır.
+            rowspan: Birden fazla satırdaki hücreleri birleştirmek için kullanılır.
+
+            Not: colspan ve rowspan yalnızca <th> ve <td> etiketleriyle kullanılabilir.
+        -->
+        <br>
+        <table border="1" width="70%" height="75" align="center">
+            <tr>
+                <th colspan="2">00</th>
+                <th>01</th>
+                <th>02</th>
+            </tr>
+            <tr>
+                <th rowspan="2" colspan="2">10</th>
+                <th>11</th>
+                <th>12</th>
+            </tr>
+            <tr>
+                <th>20</th>
+                <th>21</th>
+                <th>22</th>
+            </tr>
+        </table>
+        <!--
+            Tablo için özel bir başlık eklemek istiyorsan, başlığı <caption> </caption> etiketinin 
+            içine bu etiketin tabloda ilk etiket olarak yerleştirilmesi gerektiğini belirterek yazabilirsin
+        -->
+        <br>
+        <table border="1" width="50%" height="50" align="center">
+            <center>
+            <caption>örnek tablo</caption>
+            </center>
+            <tr>
+                <th>0</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>0</th>
+            </tr>
+        </table>
+        <hr>
+        <!--
+            Genel olarak, tarayıcıya sayfada sıralı bir liste görüntülemek istediğimizi bildirmek için <ol> </ol> 
+            etiketini kullanılıyor.
+
+            İçine eklemek istediğimiz herhangi bir öğe <li> </li> etiketinin içine yerleştirilmelidir.
+
+            bilgi : ol, sıralı liste anlamına gelen "Ordered" kelimesinin kısaltmasıdır ve li, listedeki bir 
+            öğe anlamına gelen "item" kelimesinin kısaltmasıdır.
+        -->
+        <ol>
+            <li>HTML</li>
+            <li>sıralı</li>
+            <li>listeler</li>
+        </ol>
+        <!--
+            Önceki örnekte, sıralı listeye eklediğim her seçeneğin arkasında sayılar olduğunu fark ettin mi?
+
+            ben de bunu fark ettim, bunun adı numaralandırma denir.
+
+            Listenin numaralandırma türünü istediğin göre başka bir seçeneğe seçebilirsin.
+
+            Her elemanın başında görünecek numaralandırma türünü belirtmek için type özelliği <ol> etiketine 
+            ekleyebilir ve değer olarak aşağıdaki karakterlerden birini iletebilirsin:
+
+            type="A": Her öğeden önce büyük harflerle alfabetik bir numaralandırma gösterir.
+            type="a": Her öğeden önce küçük harflerle alfabetik bir numaralandırma gösterir.
+            type="I": Her öğeden önce büyük harflerle roman numaralandırmasını gösterir.
+            type="i": Her öğeden önce küçük harflerle roman numaralandırmasını gösterir.
+            type="1": Her öğeden önce normal numaralandırmayı gösterir ve bu, değeri kendini belirtmemiş 
+                      olmanı durumunda ayarlanan varsayılan değerdir.
+        -->
+        <ol type="i">
+            <li>Bu</li>
+            <li>bir</li>
+            <li>deneme</li>
+            <li>yayınıdır.</li>
+        </ol>
+        <!--
+            Listenin numaralandırmaya hangi numaradan başlayacağını belirtmek istiyorsan, <ol> etiketinin 
+                start özelliğini ekleyebilir ve başlamak istediğin numarayı iletebilirsin.
+        -->
+        <ol type="i" start="5">
+            <li>Merhaba</li>
+            <li>ben</li>
+            <li>Yasin</li>
+            <li>YAŞAR</li>
+        </ol>
+        <!--
+            Numaralandırmanın ulaştığı sayının değerini değiştirmek istiyorsan, listedeki belirli bir 
+            elemandan başlayarak, elemana value özelliğini (yani <li> etiketine) ekleyebilir ve istediğin 
+            sayıyı iletebilirsin.
+        -->
+        <ol>
+            <li>Merhaba</li>
+            <li>ben</li>
+            <li value="101">Yasin</li>
+            <li>YAŞAR</li>
+        </ol>
+        <ol style="color: #ff0000;">
+            <li>bu</li>
+            <li>listenin</li>
+            <li>rengi</li>
+            <li>kırmızıdır.</li>
+        </ol>
+        <!--
+            Liste öğesinin altında görünmesi için listeleri iç içe gösterebilirsin.
+            Özel bir liste ayarlamak istediğin herhangi bir öğe, öğenin içindeki listeyi bilmelidir.
+        -->
+        <ol>
+            <!-- İçine koyduğumuz ilk öğe üç öğeden oluşan bir liste -->
+            <li>Front-End
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ol>
+            </li>
+            <!-- İçine koyduğumuz ikinci öğe, iki öğeden oluşan bir liste -->
+            <li>Back-End
+                <ol>
+                    <li>MySQL</li>
+                    <li>Aspnetcore</li>
+                </ol>
+            </li>
+        </ol>
+        <hr>
     </body>
 </html>
