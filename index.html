@@ -5,54 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yasin YAŞAR | Biyomedikal Mühendisi</title>
   <meta name="description" content="Yasin YAŞAR - biyomedikal mühendisi. Hastane ortamı için otomasyon, gömülü elektronik ve yapay zeka projeleri.">
+  <meta name="theme-color" content="#070b10">
   <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
+  <div id="progress"></div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div id="glow" aria-hidden="true"></div>
 
   <header class="nav">
     <div class="wrap">
-      <a class="brand" href="#top">Yasin YAŞAR</a>
-      <nav class="nav-links">
-        <a href="#about">Hakkımda</a>
-        <a href="#projects">Projelerim</a>
-        <a href="#contact">İletişim</a>
-      </nav>
+      <a class="brand" href="#top"><i></i>Yasin YAŞAR</a>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="#about">Hakkımda</a>
+          <a href="#projects">Projeler</a>
+          <a href="#demo">Demolar</a>
+          <a href="#terminal">Terminal</a>
+          <a href="#contact">İletişim</a>
+        </nav>
+        <button class="kbd" id="palBtn" type="button" aria-label="Komut paletini aç">Ctrl K</button>
+      </div>
     </div>
   </header>
 
   <section class="hero" id="top">
-    <div class="wrap">
-      <span class="eyebrow">Biyomedikal Mühendisi</span>
-      <h1>Daima bir adım <span>geleceğe!</span></h1>
-      <p class="lead">Hastane ortamı için otomasyon, gömülü elektronik ve yapay zeka. Fikirlerinizi gerçeğe dönüştürüyorum.</p>
-      <div class="chips">
-        <span class="chip">Biyomedikal</span>
-        <span class="chip">Otomasyon</span>
-        <span class="chip">Gömülü Sistemler</span>
-        <span class="chip">Yapay Zeka</span>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Biyomedikal Mühendisi</span>
+        <h1 aria-label="Yasin YAŞAR"><span class="sc">Yasin</span><br><span class="sc">YAŞAR</span></h1>
+        <p class="role"><span class="prompt">&gt;</span><span id="typed"></span><span class="caret"></span></p>
+        <p class="lead">Daima bir adım geleceğe! Hastane ortamı için otomasyon, gömülü elektronik ve yapay zeka. Fikirlerinizi gerçeğe dönüştürüyorum.</p>
+        <div class="actions">
+          <a class="btn solid" href="#contact">Benimle İletişime Geç</a>
+          <a class="btn" href="#projects">Projelere Göz At</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-count="14">14</b><span>proje</span></div>
+          <div class="stat"><b data-count="3">3</b><span>ana alan</span></div>
+        </div>
       </div>
-      <div class="actions">
-        <a class="btn solid" href="#contact">Benimle İletişime Geç</a>
-        <a class="btn" href="#projects">Projelere Göz At</a>
+      <div class="visual">
+        <canvas id="orb" aria-hidden="true"></canvas>
+        <span class="orb-hint">SÜRÜKLE · DÖNDÜR</span>
+        <dl class="hud" aria-label="Canlı telemetri">
+          <div class="hud-title">CANLI TELEMETRİ</div>
+          <div><dt>FPS</dt><dd id="hFps">--</dd></div>
+          <div><dt>DÜĞÜM</dt><dd id="hNode">--</dd></div>
+          <div><dt>İMLEÇ</dt><dd id="hMouse">--</dd></div>
+          <div><dt>KAYDIRMA</dt><dd id="hScroll">0%</dd></div>
+          <div><dt>SAAT</dt><dd id="hClock">--</dd></div>
+          <div><dt>AÇIK</dt><dd id="hUp">00:00</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
   <section class="block" id="about">
     <div class="wrap about-grid">
-      <div class="about-text">
-        <h2>Hakkımda</h2>
+      <div class="about-text reveal">
+        <h2>Hakkımda<span>.</span></h2>
         <p class="sub">Sorunu önce anlayıp sonra sade ve çalışan bir çözüm kurmayı seviyorum.</p>
         <p>Ben Yasin, <strong>biyomedikal mühendisiyim</strong>. Hastane ortamındaki günlük işleri kolaylaştıran otomasyon
           sistemleri geliştiriyorum: tekrar eden kayıt ve rapor işlerini yazılıma devrediyor, elle yapılan adımları azaltıyorum.</p>
-        <p>Tez çalışmamda <strong>yapay sinir ağları, derin öğrenme ve makine öğrenmesiyle</strong> ilgileniyorum. Boş zamanlarımda
-          gömülü elektronik (EEPROM ve PIC programlayıcıları, ESP tabanlı cihazlar), küçük oyunlar ve kendi bilgisayarımda
-          çalışan yerel yapay zeka modelleriyle denemeler yapıyorum.</p>
+        <p>Tez çalışmamda <strong>yapay sinir ağları, derin öğrenme ve makine öğrenmesiyle</strong> ilgileniyorum.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Otomasyon</span>
+          <span class="tag">Gömülü Sistemler</span>
+          <span class="tag">Derin Öğrenme</span>
+          <span class="tag">Biyomedikal</span>
+        </div>
       </div>
-      <aside class="card profile">
-        <div class="avatar" aria-hidden="true">YY</div>
+      <aside class="card profile reveal">
+        <div class="avatar" aria-hidden="true"><span>YY</span></div>
         <strong>Yasin YAŞAR</strong>
-        <div class="role">BİYOMEDİKAL MÜHENDİSİ</div>
+        <div class="role-line">BİYOMEDİKAL MÜHENDİSİ</div>
         <p class="quote">"Liderlik önce hizmet etmektir"</p>
       </aside>
     </div>
@@ -60,53 +90,97 @@
 
   <section class="block" id="projects" style="padding-top:0">
     <div class="wrap">
-      <h2>Projelerim</h2>
-      <p class="sub">Üzerinde çalıştığım işlerden bazıları.</p>
+      <h2 class="reveal">Projelerim<span>.</span></h2>
+      <p class="sub reveal">Üzerinde çalıştığım işlerden bazıları. Kartların üzerinde gezdir.</p>
       <div class="projects">
-        <article class="card project">
-          <span class="tag">Otomasyon</span>
-          <h3>Bakım ve servis otomasyonu</h3>
-        </article>
-        <article class="card project">
-          <span class="tag">Yapay zeka</span>
-          <h3>PCB arıza tespiti</h3>
-        </article>
-        <article class="card project">
-          <span class="tag">Gömülü</span>
-          <h3>Programlayıcılar</h3>
-        </article>
-        <article class="card project">
-          <span class="tag">Yapay zeka</span>
-          <h3>Yerel kodlayıcı</h3>
-        </article>
-        <article class="card project">
-          <span class="tag">Oyun</span>
-          <h3>Oyun ve simülasyon</h3>
-        </article>
-        <article class="card project">
-          <span class="tag">Ağ</span>
-          <h3>MAC bulucu</h3>
-        </article>
+        <article class="card project reveal"><span class="kind">Otomasyon</span><h3>Bakım ve servis otomasyonu</h3></article>
+        <article class="card project reveal"><span class="kind">Yapay zeka</span><h3>PCB arıza tespiti</h3></article>
+        <article class="card project reveal"><span class="kind">Gömülü</span><h3>Programlayıcılar</h3></article>
+        <article class="card project reveal"><span class="kind">Yapay zeka</span><h3>Yerel kodlayıcı</h3></article>
+        <article class="card project reveal"><span class="kind">Oyun</span><h3>Oyun ve simülasyon</h3></article>
+        <article class="card project reveal"><span class="kind">Ağ</span><h3>MAC bulucu</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="demo" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="reveal">Canlı demolar<span>.</span></h2>
+      <p class="sub reveal">Projelerimden üç küçük örnek. Hepsi bu sayfada, tarayıcıda gerçekten çalışıyor.</p>
+      <div class="tabs reveal" role="tablist" aria-label="Demolar">
+        <button class="tab" role="tab" id="t0" aria-controls="p-logic" aria-selected="true" type="button">Mantık atölyesi <small>elektronik oyunu</small></button>
+        <button class="tab" role="tab" id="t1" aria-controls="p-fizik" aria-selected="false" type="button">Fizik sandbox <small>fizik motoru</small></button>
+        <button class="tab" role="tab" id="t2" aria-controls="p-ekg" aria-selected="false" type="button">EKG atölyesi <small>biyomedikal</small></button>
+      </div>
+      <div class="card demo reveal">
+        <div class="panel" id="p-logic" role="tabpanel" aria-labelledby="t0"></div>
+        <div class="panel" id="p-fizik" role="tabpanel" aria-labelledby="t1" hidden>
+          <p class="demo-not">Boş bir yere tıkla: top düşer. Sürükleyip bırak: fırlat. Toplar birbirine ve duvarlara gerçekten çarpar.</p>
+          <canvas id="fizikCv" class="sim" aria-label="Fizik sandbox"></canvas>
+          <div class="ctl">
+            <label>Yerçekimi <input type="range" id="fG" min="0" max="2000" value="900"></label>
+            <label>Zıplama <input type="range" id="fE" min="0" max="1" step="0.05" value="0.8"></label>
+            <button type="button" data-f="ekle">+10 top</button>
+            <button type="button" data-f="temizle">Temizle</button>
+            <button type="button" id="fDur">Duraklat</button>
+            <span class="oku" id="fOku"></span>
+          </div>
+        </div>
+        <div class="panel" id="p-ekg" role="tabpanel" aria-labelledby="t2" hidden>
+          <div class="ekg-top">
+            <div class="bpm"><b id="eBpm">--</b><span>bpm</span></div>
+            <div class="ekg-info"><div id="eAd">Normal sinüs ritmi</div><div id="eRR">RR: -- ms</div><div id="eDuz"></div></div>
+          </div>
+          <canvas id="ekgCv" class="sim" aria-label="EKG ritim simülasyonu"></canvas>
+          <div class="ctl">
+            <button type="button" data-r="normal" class="on">Normal</button>
+            <button type="button" data-r="tasi">Taşikardi</button>
+            <button type="button" data-r="brady">Bradikardi</button>
+            <button type="button" data-r="af">Atriyal fibrilasyon</button>
+            <label>Nabız <input type="range" id="eHiz" min="30" max="180" value="72"></label>
+            <button type="button" id="eDur">Duraklat</button>
+          </div>
+          <p class="demo-not">Eğitim amaçlı simülasyon; gerçek hasta verisi ya da tıbbi cihaz değildir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="terminal" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="reveal">Terminali dene<span>.</span></h2>
+      <p class="sub reveal">Gerçekten çalışıyor. <b>help</b> yaz, Enter'a bas. <b>tema mavi</b> yazıp sitenin rengini de değiştirebilirsin.</p>
+      <div class="term reveal">
+        <div class="term-bar"><i></i><i></i><i></i><b>yasin@portfolyo: ~</b></div>
+        <div class="term-body" id="termBody">
+          <div id="termOut" class="out" aria-live="polite"></div>
+          <div class="term-line">
+            <label for="termIn">yasin@portfolyo:~$</label>
+            <input id="termIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal komutu">
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="block" id="contact" style="padding-top:0">
     <div class="wrap">
-      <div class="card contact-card">
+      <div class="card contact-card reveal">
         <div>
-          <h2>İletişim</h2>
+          <h2>İletişim<span>.</span></h2>
           <ul class="contact-list">
             <li><a href="mailto:bme.yasinysr@gmail.com">bme.yasinysr@gmail.com</a></li>
             <li><a href="https://github.com/YasinYSR" target="_blank" rel="noopener">github.com/YasinYSR</a></li>
           </ul>
         </div>
-        <a class="btn" href="mailto:bme.yasinysr@gmail.com?subject=Merhaba%20Yasin">Bana Mail At</a>
+        <a class="btn solid" href="mailto:bme.yasinysr@gmail.com?subject=Merhaba%20Yasin">Bana Mail At</a>
       </div>
     </div>
   </section>
 
-  <footer>© 2026 Yasin YAŞAR</footer>
+  <footer>© 2026 Yasin YAŞAR · Ctrl+K ile komut paletini aç</footer>
 
+  <script src="main.js"></script>
+  <script src="demos.js"></script>
 </body>
 </html>
